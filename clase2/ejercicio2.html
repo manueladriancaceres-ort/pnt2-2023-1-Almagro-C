@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const precioProductos = [500,600,350,1001,200];
+        const resultados = {
+            cantidadEntreCeroyQuinientos : 0,
+            totalEntreCeroyQuinientos : 0,
+            cantidadEntreQuinientosUnoyMil : 0,
+            totalEntreQuinientosUnoyMil: 0,
+            totalSuperioraMil : 0
+        }
+        for(let i=0; i < precioProductos.length; i++) {
+            if(precioProductos[i] > 0 &&  precioProductos[i] <= 500) {
+                resultados.cantidadEntreCeroyQuinientos ++;
+                resultados.totalEntreCeroyQuinientos += precioProductos[i];
+            } else if (precioProductos[i] < 1000) {
+                resultados.cantidadEntreQuinientosUnoyMil ++;
+                resultados.totalEntreQuinientosUnoyMil += precioProductos[i];
+            } else {
+                resultados.totalSuperioraMil += precioProductos[i];
+            }
+        }
+        console.log(resultados);
+    </script>
+</body>
+</html>
