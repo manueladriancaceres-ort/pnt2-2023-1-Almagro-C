@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const persona = {
+            nombre: "Juan",
+            edad: 30
+        }
+        console.log(persona);
+        persona.edad = 22;
+        console.log(persona);
+        console.log(persona["edad"]);
+        console.log(persona.edad);
+        persona.direccion = "Sarmiento 123 caba";
+        console.log(persona);
+        delete persona.edad;
+        console.log(persona);
+        const miVariable = "edad";
+        console.log(persona[miVariable]);
+    </script>
+</body>
+</html>
