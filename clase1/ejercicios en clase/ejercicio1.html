@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ejercicio en clase
+        const miLista = [3,-2,3,10,12,-14,-8];
+        miLista.push(30);
+        console.log(miLista);
+        console.log('Tamaño de la lista ' + miLista.length);
+        miLista.pop();
+        console.log(miLista);
+        console.log(cantidadElementos(miLista));
+        console.log(calcular());
+        // esto da verdadero
+        console.log( 8 == '8');
+        // para verificar tipo
+        console.log( 8 === '8');
+        function cantidadElementos(lista) {
+            return lista.length;
+        }
+
+        function calcular() {
+            let j = 10;
+        }
+    </script>
+</body>
+</html>

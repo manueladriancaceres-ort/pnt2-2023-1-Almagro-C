@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numeros = [3,6,7,10,12,2,1];
+        numeros.forEach(numero => console.log(numero));
+
+        const numerosPorDos = numeros.map(n => n*2);
+        numerosPorDos.forEach(numero => console.log(numero));
+
+        const personas = [{id:1,nombre:"Erik",edad:30},{id:2,nombre:"Carlos",edad:25}];
+        personas.forEach(persona => console.log(`numero ${persona.id} nombre ${persona.nombre}` ));
+
+        const personasEdadMasCinco = personas.map(p =>{ return {id:p.id,nombre:p.nombre,edad:p.edad+5} });
+        personasEdadMasCinco.forEach(p => console.log(p));
+
+        console.log("Filtro");
+        const numerosMayoresa6 = numeros.filter(n => n > 6 );
+        numerosMayoresa6.forEach(n => console.log(n));
+        console.log("Filtro personas mayores a 25 años");
+        const personasMayoresAVeintiCinco = personas.filter(p => p.edad > 25 );
+        personasMayoresAVeintiCinco.forEach(p => console.log(p));
+
+        console.log("Reduce, ejemplo suma de elementos desde 1000");
+        console.log(numeros.reduce((a,n) => a+n, 1000 ));
+        console.log("Reduce, ejemplo suma de elementos de una lista de objetos");
+        console.log(personas.reduce((a,p) => a+p.edad,0));
+
+        console.log("Ejemplo sort, orden de lista de numeros");
+        const numerosCopia = [...numeros];
+        console.log(numerosCopia.sort());
+        const numerosOrdenNumerico = [...numeros];
+        console.log(numerosOrdenNumerico.sort((a,b)=>a-b));
+        console.log("Ejemplo sort, orden lista de objetos por nombre");    
+        const personasOrdenNombre = [...personas];
+        console.log(personasOrdenNombre.sort((a,b)=>a.nombre.localeCompare(b.nombre)));
+
+        console.log("Map filter y reduce");
+        console.log(numeros.map(n=>n+2).filter(n=>6).reduce((a,b)=>a+b,0));
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+        {{ mensaje }}
+        <p :style="{ color: color, fontSize: fontSize + 'px' }">Algún parrafo</p>
+        <p v-if="ver"> Algun texo</p>
+        <p v-else="!ver"> Mas texto</p>
+        <p v-show="ver"> Texto con v-show</p>
+        <li v-for="persona in personas">
+            id {{persona.id}} nombre {{persona.nombre}}
+        </li>
+        <button v-on:click="cambioMensaje">Cambio mensaje</button>
+        <button v-on:click="cambioColor">Cambio color parrafo</button>
+        </br>
+        <input type="text" v-model="mensaje">
+    </div>
+    <script>
+        const { createApp } = Vue
+        const obj = createApp({
+            data() {
+                return {
+                    mensaje: 'Hola Vue!',
+                    color: 'blue',
+                    fontSize: 20,
+                    ver: false,
+                    personas: [
+                        {id:100,nombre:'Juana'},
+                        {id:101,nombre:'Erik'},
+                        {id:102,nombre:'Raul'}
+                    ]
+                }
+            },
+            methods: {
+                cambioMensaje() { this.mensaje = "Cambio"},
+                cambioColor() {this.color = 'green'}
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>

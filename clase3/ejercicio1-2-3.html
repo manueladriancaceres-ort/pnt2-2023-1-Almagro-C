@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio 1
+        const listaVieja = [1, 2, 3, 4, 5]
+        const listaNueva = listaVieja.map(n => n * 5)
+        listaNueva.forEach(n => {
+            console.log(n)
+        })
+        // Ejercicio 2
+        const precios = [100, 120, 300, 230, 320]
+        const IVA = 0.21
+        const preciosConImpuesto = precios.map(n => n + (n * IVA))
+        preciosConImpuesto.forEach(n => {
+            console.log(n)
+        })
+        // Ejercicio 3
+        const productosSinIva = [{id:1,descripcion: "prov1",precio:1000},{id:2,descripcion:"prov2", precio: 1300}]
+        const aliIva = 1.21
+        const productosConIva = productosSinIva.map(prod => {return {id:prod.id,descripcion:prod.descripcion,precio: prod.precio*aliIva}})
+        productosConIva.forEach(producto => console.log(producto))
+
+    </script>
+</body>
+
+</html>

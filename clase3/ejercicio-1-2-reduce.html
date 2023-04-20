@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio 1
+        const listaNum = [4, 3, -2, 5, 8, -12, 10];
+        console.log(listaNum.reduce((n, a) => n + a, 100));
+        // Ejercicio 2
+        const recibos = [
+            { numero: 1000, importe: 1500 },
+            { numero: 1001, importe: 2300 },
+            { numero: 1002, importe: 1200 }
+        ]
+        const sumaTotal = recibos.reduce((a, c) => a + c.importe, 0)
+        console.log(sumaTotal)
+        // Ejercicio map filter y reduce
+    
+        const preciosIva= [2300,2500,5000,10000,1300]
+        console.log(preciosIva.map(p => p*1.21).filter(n=> n>3000).reduce((a,c)=> a+c,0))
+
+
+    </script>
+</body>
+
+</html>

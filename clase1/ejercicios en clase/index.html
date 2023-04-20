@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("Hola mundo");
+        // evitar uso de la palabra reservada var
+        // var variable = "algo";
+        let variable = 100;
+        console.log(variable);
+
+        let palabra = "un texto";
+        console.log(palabra[3]);
+        palabra[3] = 's';
+        console.log(palabra);
+        // las cadenas son inmutables
+        // para cambiar un elemento, hay que 
+        // reemplazar todo
+        const lista = [23,"juan",true];
+        console.log(lista);
+        console.log(lista[0]);
+        // se usa const para mantener el tipo dato
+        for(let i = 0; i < lista.length; i++ ) {
+            console.log(lista[i]);            
+        }
+        // ejercicio en clase
+        let listaEjercicio = [3,-2,3,10,12,-14,-8]
+        const resultados = [0,0,0];
+
+        for (let index = 0; index < listaEjercicio.length; index++) {
+            if (listaEjercicio[index] > 0) {
+                resultados[0]++;
+            }
+            if (listaEjercicio[index] < 0) {
+                resultados[1]++;
+            }
+            if (listaEjercicio[index] > 3) {
+                resultados[2]++;
+            }            
+        }
+
+        console.log("Cantidad de positivos " + resultados[0]);
+        console.log("Cantidad de Negativos " + resultados[1]);
+        console.log("Cantidad de mayores a tres " + resultados[2]);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

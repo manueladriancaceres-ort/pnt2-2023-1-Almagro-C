@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // break hasta 20:20
+        // ejercicio1
+        const numeros = [10, 21, 34, 5, 12];
+        function retornarMenores(array, num) {
+            return array.filter(n => n < num)
+        }
+        retornarMenores(numeros, 20).forEach(n => console.log(n))
+        // ejercicio2
+        const ncs = [
+            { id: 100, descripcion: "prov1", precio: 1000 },
+            { id: 102, descripcion: "prov2", precio: 1300 },
+            { id: 103, descripcion: "prov3", precio: 600 },
+        ];
+        function retornoNc(array, precio) {
+            return array.filter(n => n.precio < precio)
+        }
+        retornoNc(ncs, 1100).forEach(n => console.log(n))
+
+
+    </script>
+</body>
+
+</html>
